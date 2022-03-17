@@ -106,10 +106,11 @@ export default function CreateBudget() {
                     <div className="col-50">
                         <label>
                             CIF
-                            <span className="alert"> {validFields.cif.message}</span>
+                            <span data-testid="validation-cif-span" className="alert"> {validFields.cif.message}</span>
                         </label>
                         <input type="text" 
                                name="cif"
+                               data-testid="cif"
                                value={values.cif}
                                onChange={handleOnChange}
                                maxLength={9}/>
